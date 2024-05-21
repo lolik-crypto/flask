@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+ 
+{% block content %}
+{{ super() }}
+<p>Метод модели Логистической регрессии
+<form action="/model_Logistic" method="POST">
+       <p><input type="text" class="form_text" name="list1"> Введите вес тела </p>
+    <p><input name="list2" class="form_text" type="text"> Введите возраст </p>
+    <p><input name="list3" class="form_text" type="text"> Введите вашу активность по 10 бальной</p>
+    <input type="submit" class="form_btn" value="Узнать активность">
+    <h1>{{class_model}}</h1>
+     <p>Accuracy: {{ accuracy }}</p>
+<p>Precision: {{ precision }}</p>
+<p>Recall: {{ recall }}</p>
+    </p>
+</form>
+
+
+
+{% endblock %}
